@@ -1,0 +1,28 @@
+<resources>
+    <!-- Common -->
+    <string name="app_name">MoneyTracker</string>
+
+    <!-- Screen 1: Welcome -->
+    <string name="welcome_subtitle">Your finances under control</string>
+    <string name="start_tracking">Start Tracking</string>
+
+    <!-- Screen 2: Profile -->
+    <string name="profile_title">Fill in your profile</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_salary">Salary</string>
+    <string name="hint_goal">What do you want to save for</string>
+    <string name="continue_button">Continue</string>
+
+    <!-- Screen 3: Categories -->
+    <string name="categories_title">Your budget categories</string>
+    <string name="dream_category">For dream</string>
+    <string name="food_category">For food</string>
+    <string name="fun_category">For entertainment</string>
+    <string name="transport_category">For transport</string>
+
+    <string name="zero_currency">0 rub</string>
+    <string name="currency_format">%d rub</string>
+
+    <string name="save_button">Save</string>
+    <string name="hint_enter_amount">Enter amount (₽)</string>
+</resources>

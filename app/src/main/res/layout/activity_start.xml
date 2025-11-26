@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/Heading1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cygre_extrabold"
+        android:text="@string/app_name"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish"
+        android:text="@string/welcome_subtitle"
+        android:layout_marginBottom="48dp" />
+
+    <Button
+        android:id="@+id/btnStart"
+        style="@style/PrimaryButton"
+        android:fontFamily="@font/mulish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_tracking" />
+
+</LinearLayout>

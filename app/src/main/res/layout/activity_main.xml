@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:fontFamily="@font/cygre_extrabold"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textViewSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/categories_title"
+        android:fontFamily="@font/mulish"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 🔹 Контейнер для двух экранов -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="502dp"
+        android:layout_weight="1">
+
+        <!-- Экран с диаграммой -->
+        <LinearLayout
+            android:id="@+id/layoutChart"
+            android:layout_width="match_parent"
+            android:layout_height="491dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!-- Диаграмма -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="311dp"
+                android:gravity="center">
+
+                <com.example.money_tracker.PieChartView
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="231dp"
+                    android:layout_marginTop="80dp" />
+            </FrameLayout>
+
+            <!-- категории -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="296dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="32dp">
+
+                <!-- мечта -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_primary_background"
+                    android:backgroundTint="#F8EDE7"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/mulish"
+                        android:text="@string/dream_category"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDreamValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mulish"
+                        android:text="@string/zero_currency"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!-- продукты -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_primary_background"
+                    android:backgroundTint="#EEF8F7"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/food_category"
+                        android:fontFamily="@font/mulish"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFoodValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zero_currency"
+                        android:fontFamily="@font/mulish"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!-- развлечения -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_primary_background"
+                    android:backgroundTint="#ECE9F2"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/fun_category"
+                        android:fontFamily="@font/mulish"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFunValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mulish"
+                        android:text="@string/zero_currency"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!--                Транспорт-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_primary_background"
+                    android:backgroundTint="#E3F2FD"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/transport_category"
+                        android:fontFamily="@font/mulish"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTransportValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zero_currency"
+                        android:fontFamily="@font/mulish"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Экран с полями ввода -->
+        <ScrollView
+            android:id="@+id/layoutCategories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Категория 1 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_primary_background"
+                    android:backgroundTint="#F8EDE7"
+                    android:fontFamily="@font/mulish"
+                    android:padding="12dp"
+                    android:text="@string/dream_category"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/etDream"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="@drawable/edittext_background"
+                    android:fontFamily="@font/mulish"
+                    android:hint="@string/hint_enter_amount"
+                    android:layout_marginStart="8dp"
+                    android:inputType="number" />
+
+                <!-- Категория 2 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_primary_background"
+                    android:backgroundTint="#EEF8F7"
+                    android:fontFamily="@font/mulish"
+                    android:padding="12dp"
+                    android:text="@string/food_category"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/etFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/hint_enter_amount"
+                    android:fontFamily="@font/mulish"
+                    android:layout_marginStart="8dp"
+                    android:inputType="number" />
+
+                <!-- Категория 3 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_primary_background"
+                    android:backgroundTint="#ECE9F2"
+                    android:fontFamily="@font/mulish"
+                    android:padding="12dp"
+                    android:text="@string/fun_category"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/etFun"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/hint_enter_amount"
+                    android:fontFamily="@font/mulish"
+                    android:layout_marginStart="8dp"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_primary_background"
+                    android:backgroundTint="#E3F2FD"
+                    android:padding="12dp"
+                    android:text="@string/transport_category"
+                    android:fontFamily="@font/mulish"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/etTransport"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/hint_enter_amount"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/mulish"
+                    android:inputType="number" />
+
+                <!-- Кнопка сохранения -->
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="#92C3C0"
+                    android:fontFamily="@font/mulish"
+                    android:text="@string/save_button" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- 🔹 Нижнее меню -->
+    <LinearLayout
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageButton
+            android:id="@+id/btnTabChart"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="24dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_chart"
+            android:contentDescription="Диаграмма" />
+
+        <ImageButton
+            android:id="@+id/btnTabCategories"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_list"
+            android:contentDescription="Категории" />
+    </LinearLayout>
+</LinearLayout>

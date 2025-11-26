@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MT"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Heading1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cygre_extrabold"
+        android:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulish"
+        android:text="@string/profile_title" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="90dp" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        style="@style/InputField"
+        android:layout_width="356dp"
+        android:layout_height="73dp"
+        android:fontFamily="@font/mulish"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/hint_name" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        style="@style/InputField"
+        android:layout_width="356dp"
+        android:layout_height="73dp"
+        android:fontFamily="@font/mulish"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/hint_salary" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        style="@style/InputField"
+        android:layout_width="356dp"
+        android:layout_height="73dp"
+        android:fontFamily="@font/mulish"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/hint_goal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <Button
+        android:id="@+id/startButton2"
+        style="@style/PrimaryButton"
+        android:fontFamily="@font/mulish"
+        android:layout_width="291dp"
+        android:layout_height="66dp"
+        android:text="@string/continue_button" />
+
+</LinearLayout>
